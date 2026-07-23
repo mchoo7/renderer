@@ -155,6 +155,9 @@ set(BACKEND_SOURCES "")
 if(ENABLE_OPENGL)
     list(APPEND BACKEND_SOURCES src/backends/opengl_backend.cpp)
 endif()
+if(ENABLE_VULKAN)
+    list(APPEND BACKEND_SOURCES src/backends/vulkan_backend.cpp)
+endif()
 # Add src/backends/<name>_backend.cpp here as other backends are implemented
 
 # --- Executable Target ---

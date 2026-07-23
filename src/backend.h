@@ -2,6 +2,9 @@
 #include "camera.h"
 
 #include "imgui.h"
+#ifdef APP_BACKEND_VULKAN
+#define GLFW_INCLUDE_VULKAN
+#endif
 #include <GLFW/glfw3.h>
 
 // ---------------------------------------------------------------------------

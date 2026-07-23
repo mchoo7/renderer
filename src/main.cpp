@@ -21,6 +21,9 @@ using namespace std::literals;
 #ifdef APP_BACKEND_OPENGL
 #include "backends/opengl_backend.h"
 #endif
+#ifdef APP_BACKEND_VULKAN
+#include "backends/vulkan_backend.h"
+#endif
 
 static constexpr std::string_view backendName(Backend b) {
     switch (b) {
@@ -66,6 +69,10 @@ static std::unique_ptr<RendererBackend> createBackend(Backend b) {
 #ifdef APP_BACKEND_OPENGL
     case Backend::OpenGL:
         return std::make_unique<OpenGLBackend>();
+#endif
+#ifdef APP_BACKEND_VULKAN
+    case Backend::Vulkan:
+        return std::make_unique<VulkanBackend>();
 #endif
     default:
         return nullptr;
