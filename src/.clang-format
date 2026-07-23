@@ -1,0 +1,10 @@
+---
+# Base configuration
+BasedOnStyle: LLVM
+
+# Use 4 spaces for indentation
+IndentWidth: 4
+ContinuationIndentWidth: 4
+
+# Disable the column limit (0 disables wrapping)
+ColumnLimit: 0

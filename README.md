@@ -16,3 +16,28 @@ Supported graphics APIs:
 - Vulkan 1.3
 
 Only the latest version of each API is supported in order to take full advantage of their capabilities.
+
+## Build
+
+Requirements:
+
+- C/C++ compiler with C++20 and above
+- CMake
+- Vulkan SDK for Vulkan backend
+- GLFW and GLM should be installed from a package manager
+  - macOS: `brew install glfw glm`
+  - Fedora: `dnf install glfw-devel glm-devel`
+
+Preferred IDE and build system are optional requirements. This includes:
+
+- Ninja
+- CLion
+- Xcode
+- Visual Studio
+
+Run CMake with your preferred generator. For example:
+
+```console
+$ cmake -S . -B build -G Ninja -D<options>
+$ cmake --build build
+```
